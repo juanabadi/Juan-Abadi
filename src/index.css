@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@layer base {
+  html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000000;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+
+#youtube-player-wrapper,
+#youtube-player-wrapper iframe,
+.video-wrapper,
+.video-wrapper iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+  pointer-events: none !important;
+  touch-action: none !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+.noise-texture {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.10'/%3E%3C/svg%3E");
+}
+
+/* ------------------------------------------------------------------
+   TIPOGRAFÍA — Public Sans
+------------------------------------------------------------------- */
+
+.font-transmediale {
+  font-family: "Public Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  -webkit-text-stroke: 0.012em currentColor;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 739px) {
+  .font-transmediale {
+    -webkit-text-stroke-width: 0.008em;
+  }
+}
+
+.spray-highlight {
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  border-radius: 6px;
+  padding: 2px 1.3px;
+  transition: background-color 0.65s ease-in-out, box-shadow 0.65s ease-in-out;
+  display: inline;
+  cursor: pointer;
+}
+
+.spray-highlight:hover {
+  transition: background-color 0.16s ease-out, box-shadow 0.16s ease-out;
+}
+
+.spray-1:hover {
+  background-color: rgba(255, 79, 12, 0.8);
+  box-shadow: 0 0 20px 8px rgba(255, 79, 12, 0.8);
+}
+
+.spray-3:hover {
+  background-color: rgba(150, 255, 80, 0.8);
+  box-shadow: 0 0 20px 8px rgba(150, 255, 80, 0.8);
+}
+
+.spray-4:hover {
+  background-color: rgba(160, 160, 255, 0.8);
+  box-shadow: 0 0 20px 8px rgba(160, 160, 255, 0.8);
+}
+
+.spray-5:hover,
+.group:hover .spray-5-part {
+  background-color: rgba(206, 125, 158, 0.8);
+  box-shadow: 0 0 20px 8px rgba(206, 125, 158, 0.8);
+}
+
+/* Custom subtle scrollbar for popup */
+.custom-circle-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+}
+
+.custom-circle-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-circle-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-circle-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 9999px;
+}
+
+.custom-circle-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+@keyframes hintPulse {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-hint-pulse {
+  animation: hintPulse 4.2s ease-in-out infinite;
+  will-change: opacity;
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'tm Genova';
+        src: url('https://transmediale.de/fonts/tmGenovaVF.woff2') format('woff2');
+      }
+      .favicon-text {
+        font-family: 'tm Genova', Geneva, Arial, sans-serif;
+        font-weight: 600;
+        fill: #FFFFFF;
+        font-size: 38px;
+        letter-spacing: -0.5px;
+      }
+    </style>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#FF4F0C"/>
+  <text x="32" y="41" text-anchor="middle" class="favicon-text">j.</text>
+</svg>
